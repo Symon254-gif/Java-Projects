@@ -9,6 +9,7 @@ public class Customer {
     private String gender;
     private String DOB;
     private long AccNo;
+    private int age;
 
     public void setNames(String names) {
         this.names = names;
@@ -33,8 +34,6 @@ public class Customer {
     public void setAge(int age) {
         this.age = age;
     }
-
-    private int age;
 
 
     public void getInfo(){
