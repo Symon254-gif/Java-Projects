@@ -1,6 +1,10 @@
-import java.util.Scanner;
+//import java.util.HashMap;
+import java.util.*;
 
 public class Customer {
+    /*this class collects all the information about a customer such as full names, ID number, Gender, Date of birth, age and account number.
+    The class should have a method through which the customer information is collected. The information collected should be stored in an array.this class collects all the information about a customer such as full names, ID number, Gender, Date of birth, age and account number. The class should have a method through which the customer information is collected.
+    The information collected should be stored in an array.*/
     String[] Information = new String[100];
     int index=0;
     Scanner get = new Scanner(System.in);
@@ -10,6 +14,10 @@ public class Customer {
     private String DOB;
     private long AccNo;
     private int age;
+
+    public long getAccNo() {
+        return AccNo;
+    }
 
     public void setNames(String names) {
         this.names = names;
@@ -56,6 +64,7 @@ public class Customer {
         System.out.println("Account Number: ");
         AccNo = get.nextLong();
         setAccNo(AccNo);
+        storeInfo();
     }
 
     public void storeInfo(){
@@ -67,14 +76,6 @@ public class Customer {
 
         Information[index]=Entry;
         index++;
-    }
 
-    public void display(){
-        int i;
-        for (i=0;i<=index;i++){
-            System.out.println("Stored details");
-            System.out.println(Information[i]);
-            System.out.println();
-        }
     }
 }
